@@ -25,17 +25,30 @@ The script is **idempotent** – running it multiple times won't make unnecessar
 - Hardware: **OneXPlayer Apex**
 - OS: **SteamOS** (any recent version)
 - **root** privileges (the script will request sudo automatically)
+- **A password set for the user `deck`** (required for `sudo` to work)
 - Internet connection (for downloading the script)
 
 ## 🚀 Installation and Usage
 
-Copy and run this **single command** in your terminal:
+### Prerequisite: Set a password for the `deck` user
+
+By default, SteamOS does not have a password set for the `deck` user, which means `sudo` will fail when the script tries to request root privileges.
+
+Before running the fix, open a terminal in Desktop Mode and set your password:
+```bash
+passwd
+```
+You will be prompted to enter your new password twice.
+
+### Run the script
+
+Once your password is set, copy and run this **single command** in your terminal:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Welld1s/apex-steamos-fingerprint-fix/main/install.sh | sh
 ```
 
-The script will prompt for your `sudo` password if needed. Each stage prints its own status line, and the final summary tells you whether a reboot is required.
+The script will prompt for your `deck` user password. Each stage prints its own status line, and the final summary tells you whether a reboot is required.
 
 ## ⚠️ Important Notes
 
