@@ -25,15 +25,14 @@ The script is **idempotent** – running it multiple times won't make unnecessar
 - Hardware: **OneXPlayer Apex**
 - OS: **SteamOS** (any recent version)
 - **root** privileges (the script will request sudo automatically)
-- Internet connection
+- Internet connection (for downloading the script)
 
 ## 🚀 Installation and Usage
 
-Save the script to your device, make it executable, and run it:
+Copy and run this **single command** in your terminal:
 
 ```bash
-chmod +x apex-steamos-fingerprint-fix.sh
-./apex-steamos-fingerprint-fix.sh
+curl -fsSL https://raw.githubusercontent.com/Welld1s/apex-steamos-fingerprint-fix/main/install.sh | sh
 ```
 
 The script will prompt for your `sudo` password if needed. Each stage prints its own status line, and the final summary tells you whether a reboot is required.
